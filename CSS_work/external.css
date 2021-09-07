@@ -1,0 +1,20 @@
+h1{
+    color: rgb(38, 38, 133);
+    text-align: center;
+}
+#second{
+    color: rgb(29, 29, 197);
+    text-align: center;
+}
+.clss{
+    color:rgb(173, 27, 27);
+    text-align: center;
+}
+#new{
+    color:brown ;
+    text-align: center;
+    text-decoration: line-through;
+}
+body{
+    background-color: cadetblue;
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body{
+    background-color: cyan;
+    background-image:url(C:\Users\USER\Desktop\meanstack\pic\photo);
+    background-size:cover;
+}
+div{
+    border:2px solid rgb(180, 93, 93);
+    font-family: 'Pacifico', cursive;
+    color: blueviolet;
+    background-color: brown;
+    width:30%;
+}
+.second{
+    border:2px solid black;
+    font-family: 'Shadows Into Light', cursive;
+    color: brown;
+    background-color:blueviolet ;
+}

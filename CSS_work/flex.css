@@ -1,0 +1,35 @@
+.parent{
+    width:550px;
+    height:310px;
+    background-color: rgb(137, 174, 216);
+    display: flex;
+
+}
+.col{
+    width:50px;
+    height:200px;
+    padding:25px;
+    }
+
+.first{
+   
+    background-color: rgb(151, 10, 128);
+    flex: 1;
+}
+
+.second{
+   
+    background-color: rgb(161, 79, 12);
+    flex: 2;
+}
+.third{
+   
+   
+    background-color: rgb(57, 12, 161);
+    flex:3 ;
+}
+.four{
+   
+    background-color: rgb(190, 35, 131);
+    flex:4;
+}

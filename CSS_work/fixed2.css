@@ -1,0 +1,39 @@
+.parent2{
+    width:550px;
+    height:310px;
+    background-color: rgb(137, 174, 216);
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    width:500px;
+    height:200px;
+    }
+
+.first{
+   
+    background-color: rgb(151, 10, 128);
+    
+}
+
+.second{
+   
+    background-color: rgb(161, 79, 12);
+   
+}
+.third{
+   
+   
+    background-color: rgb(57, 12, 161);
+   
+}
+.four{
+   
+    background-color: rgb(190, 35, 131);
+   
+}
+.five{
+   
+    background-color: rgb(7, 138, 13);
+     
+}

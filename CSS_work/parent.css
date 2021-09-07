@@ -1,0 +1,63 @@
+.parent{
+    border: 1px solid black;
+    width:50%;
+    height:615px;
+    background-color: hotpink;
+    position: relative;
+}
+.col{
+    width:20%;
+    height: 500px;;
+    border:1px solid black;
+}
+
+.first{
+    width:20%;
+    height:500px;
+    position:absolute;
+    background-color: rgb(151, 10, 128);
+    top:0%;
+    left:0%;
+}
+
+.second{
+    width:20%;
+    height:500px;
+    position:absolute;
+    background-color: rgb(161, 79, 12);
+    top:0%;
+    left:21%;
+}
+.third{
+    width:20%;
+    height:500px;
+    position:absolute;
+    background-color: rgb(57, 12, 161);
+    top:0%;
+    left:42% ;
+}
+.four{
+    width:20%;
+    height:500px;
+    position:absolute;
+    background-color: rgb(190, 35, 131);
+    top:0% ;
+    left:63%;
+}
+.five{
+    width:20%;
+    height:500px;
+    position:absolute;
+    background-color: rgb(7, 138, 13);
+     top:0%;
+     left:84%;
+}
+.child{
+    border: 1px solid black ;
+    width:98%;
+    height:100px;
+    position:absolute;
+    background-color: rgb(228, 197, 21);
+     top:83%;
+     left:0%;
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+i{
+align-self: center;
+}
+h1{
+    text-align: center;
+    font-family:'Nanum Gothic', sans-serif;
+}
+div{
+    width:25% ;
+    height: 250px;
+    border:1px solid;
+    text-align:left;
+    margin-top:2%;
+    margin-left:38% ;
+}
+.user{
+    background-color: rgb(237, 244, 245);
+    border-color: rgb(245, 242, 239);
+}
+.sign{
+    border-radius:30px solid ;
+    text-align:center;
+    width:96% ;
+    height:31px;
+    margin-top:2%;
+    margin-left:1%;
+    background-color:green ;
+}
+.git{
+    width:25% ;
+    height:30px;
+    margin-top:2%;
+    margin-left:38%; 
+    text-align: justify;
+}
+#forgot{
+    text-align:right;
+}
+a{
+    text-align:center ;
+}
+script src{
+ align-self: center;
+}

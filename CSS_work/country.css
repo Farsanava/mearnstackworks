@@ -1,0 +1,16 @@
+div{
+    width:32% ;
+    height:40%;
+    border-width:1px;
+    border-color:black;
+    border-style:solid;
+    float:left;
+}
+img{
+    width:100%;
+    height: 30%;
+}
+.clss img{
+    width:100%;
+    height:50%
+}

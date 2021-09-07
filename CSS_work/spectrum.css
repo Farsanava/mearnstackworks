@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+body{
+    background-color:black;
+    color: white;
+    font-family: 'Oswald', sans-serif;  
+    text-align:center;
+}
+div{
+    border:solid  black;
+    width:6%;
+    height:104px;
+}
+.a{
+    background-color: rgb(92, 52, 52);
+    margin-top:1% ;
+    margin-left:33% ;
+}
+.b{
+    background-color:rgb(126, 173, 126) ;
+    margin-top:-8.1%;
+    margin-left:40% ;
+}
+.c{
+    background-color: rgb(118, 209, 118);
+    margin-top:-8.2%;
+    margin-left:47% ;
+}
+.d{
+    background-color:rgb(72, 245, 72) ;
+    margin-top:-8.2% ;
+    margin-left:54% ;
+}
+.e{
+    background-color:rgb(228, 195, 195) ;
+    margin-top:-8.2% ;
+    margin-left:61%;
+}
+.f{
+    background-color:yellow ;
+    margin-top:3%;
+    margin-left:26%;
+}
+.g{
+    background-color:rgb(241, 100, 100) ;
+    margin-top:-8.1%;
+    margin-left:33% ;
+}
+.h{
+    background-color:rgb(186, 186, 224);
+    margin-top:-8.2%;
+    margin-left:40% ;
+}
+.i{
+    background-color:rgb(112, 112, 235) ;
+    margin-top:-8.2%;
+    margin-left:47% ;
+}
+.j{
+    background-color:rgb(38, 38, 240) ;
+    margin-top:-8.2% ;
+    margin-left:54%;
+}
+.k{
+    background-color:rgb(69, 69, 129) ;
+    margin-top:-8.2%;
+    margin-left:61% ;
+}
+.l{
+    background-color: grey;
+    margin-top:-8.2%;
+    margin-left:68% ;
+}
+.m{
+    background-color:rgb(125, 125, 168) ;
+    margin-top: 3%;
+    margin-left:19% ;
+}
+.n{
+    background-color:rgb(250, 235, 235) ;
+    margin-top: -8.1%;
+    margin-left:26% ;
+}
+.o{
+    background-color: rgb(245, 245, 127);
+    margin-top:-8.2%;
+    margin-left:33% ;
+}
+.p{
+    background-color: rgb(235, 185, 92);
+    margin-top:-8.3% ;
+    margin-left:40% ;
+}
+.q{
+    background-color: rgb(202, 42, 130);
+    margin-top:-8.3% ;
+    margin-left:47% ;
+}
+.r{
+    background-color: rgb(107, 8, 8);
+    margin-top:-8.2%;
+    margin-left:54%;
+}
+.s{
+    background-color: rgb(115, 115, 245);
+    margin-top:-8.2% ;
+    margin-left:61%;
+}
+.t{
+    background-color:rgb(68, 68, 104) ;
+    margin-top:-8.2% ;
+    margin-left:68% ;
+}
+.u{
+    background-color:rgb(223, 86, 86) ;
+    margin-top:-8.2% ;
+    margin-left:75%;
+}

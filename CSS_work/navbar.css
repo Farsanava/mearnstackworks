@@ -1,0 +1,41 @@
+.parent{
+    width:100%;
+    height:700px;
+    display:flex;
+    justify-content:space-evenly;
+}
+.col{
+    border:3px solid #080808 ;
+    width:23%;
+}
+
+.col img{
+    width:100%;
+    height:500px;
+}
+button{
+    width:80px;
+    height: 30px;
+    background-color:green;
+    color: cornsilk;
+    border-radius:20%;
+}
+.btnclass{
+    display: flex;
+    justify-content:space-around;
+}
+header{
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+    background-color: blueviolet;
+    height:50px;
+    align-items: center;
+    
+}
+header a{
+    color: white;
+    text-decoration:none;
+    padding:100px;
+
+}
