@@ -5,3 +5,10 @@ if (num1%2==0) {
 else {
     console.log(`${num1} is odd`); 
 }
+
+
+//ternary operator
+//ternary operator=condition?true:false
+num=2
+var res=num%2==0?"even":"odd"
+console.log(res);

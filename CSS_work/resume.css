@@ -1,0 +1,17 @@
+.parent{
+    border:solid 1px rgb(228, 225, 220);
+    margin-left:10%;
+    margin-right:10%;
+}
+.col1 img{
+    border-radius:20px;
+}
+.col1{
+    width:25%;
+    height:600px;
+    background-color: rgb(64, 64, 187);
+}
+.col2{
+    width:50%;
+    height:600px;
+}
