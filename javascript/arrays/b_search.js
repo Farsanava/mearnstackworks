@@ -7,7 +7,7 @@ var low=0,upp=arr.length-1;
 
 var flag=0;
 while(low<=upp){
-     mid=Math.floor((low+upp)/2);
+     mid=Math.floor((low+upp)/2);// 0+5/2==>5/2==>2.5   ==>2
     if(element<arr[mid]){
         upp=mid-1;
     }
