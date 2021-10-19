@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th, td {
+          border:1px solid rgb(241, 246, 248);
+          border-collapse: collapse;
+          border-radius: 5px;
+          background-color:white;
+        }
+        th,tr,td{
+            height: 50px;
+            width:80px;
+        }
+        #sec{
+            background-color:"red" ;
+            border:1px solid red;
+        }
+        #reset{
+            background-color: red;
+            border: 1px;
+            width: 100px;
+            height:70px;
+        }
+        #result{
+            border: 1px;
+            width: 100%;
+        }
+        #click{
+            border: 1px;
+            width: 100%;
+            background-color: rgb(238, 238, 245);
+            height: 70px;
+        }
+        
+        </style>
+</head>
+<body bgcolor="black">
+    <center>
+        <h1 style="color: white;">Calculator</h1>
+        <form action="">
+        <table >
+                  <tr>
+                      <th bgcolor="white"colspan=3><input type="text" id="result" placeholder="Result" style="height: 80px;"></th>
+                    
+                      <th id="sec" style="background-color: red; height: 10px;"><input type="reset" value="C" id="reset"></th>
+                  </tr>
+                  <tr>
+                      <td><input type="button" id="click" value="1"></td>
+                      <td><input type="button" id="click" value="2"></td>
+                      <td><input type="button" id="click" value="3"></td>
+                      <td><input type="button" id="click" value="+"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="button" id="click" value="4"></td>
+                      <td><input type="button" id="click" value="5"></td>
+                      <td><input type="button" id="click" value="6"></td>
+                      <td><input type="button" id="click" value="-"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="click" value="6"></td>
+                    <td><input type="button" id="click" value="7"></td>
+                    <td><input type="button" id="click" value="8"></td>
+                    <td><input type="button" id="click" value="*"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="click" value="/"></td>
+                    <td><input type="button" id="click" value="0"></td>
+                    <td><input type="button" id="click" value="."></td>
+                    <td><input type="button" id="click" value="="></td>
+                </tr>
+        </table>
+    </form>
+    </center>
+</body>
+<script>
+
+</script>
+</html>

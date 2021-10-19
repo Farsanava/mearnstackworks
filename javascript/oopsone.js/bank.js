@@ -1,27 +1,135 @@
+//authenticate
+//fundTransfer()
+//balanceEnquiry()
+
 class Bank {
-    createAccount(p_name, acno, ac_type, min_bal) {
-        this.p_name = p_name,
-            this.acno = acno,
-            this.ac_type = ac_type,
-            this.balance = min_bal
+    session = {}  //created for storing accout number  of authenticated account (if login success)
+    accounts = {
+        1001: {
+            acno: 1001, password: "userone", balance: 5000, transactions:
+                [
+                    { to: 1002, amount: 500 },
+                    { to: 1003, amount: 600 },
+                    { to: 1004, amount: 700 }
+                ]
+        },
+        1002: {
+            acno: 1002, password: "usertwo", balance: 7000,
+            transactions:
+                [
+                    { to: 1001, amount: 500 },
+                    { to: 1003, amount: 600 },
+                    { to: 1004, amount: 700 }
+                ]
+        },
+        1003: {
+            acno: 1003, password: "userthree", balance: 8000,
+            transactions:
+                [
+                    { to: 1001, amount: 500 },
+                    { to: 1002, amount: 600 },
+                    { to: 1004, amount: 700 }
+                ]
+        },
+        1004: {
+            acno: 1001, password: "userone", balance: 9000,
+            transactions:
+                [
+                    { to: 1001, amount: 500 },
+                    { to: 1003, amount: 600 },
+                    { to: 1004, amount: 700 }
+                ]
+        },
+
     }
-    deposite(amount) {
-        this.balance += amount
-        console.log(`your acnt ${ this.acno } has been credited with amount ${ amount } aval balance ${this.balance}`);
+
+    getAccountdetails() {
+        return this.accounts
     }
-    withdrawal(amount) {
-        if (this.balance > amount) {
-            this.balance -= amount
-            console.log(`your acnt ${this.acno} has been debited with amount ${amount} aval balance ${this.balance}`);
+    validateAccountNumber(accno) {
+        return accno in this.accounts ? true : false
+    }
+    authenticate(accno, password) {
+        //validate account number
+        if (this.validateAccountNumber(accno)) {
+            let pwd = this.accounts[accno].password
+            if (pwd == password) {
+                this.session["user"] = accno
+
+                return 1
+                //login success
+            }
+            else {
+                return -1
+                //invalid password
+            }
+            //  return pwd==password?1:0
         }
         else {
-            console.log("tansaction failed insufficient");
+            return 0
+            // -1 for invalid account number
         }
     }
+
+    balanceEnquiry() {
+
+        let user = this.session["user"]
+        return this.accounts[user].balance
+
+    }
+    fundTransfer(to_accno, amount) {
+        //chk to_accno vaalid or not
+        if (this.validateAccountNumber(to_accno)) {
+            let user = this.session["user"];
+            let bal = this.balanceEnquiry()
+            //  this.session["cred"]=to_accno;
+            //  this.session["amo"]=amount;
+            if (bal > amount) {
+                this.accounts[user].balance -= amount
+                this.accounts[to_accno].balance += amount
+                this.accounts[user].transactions.push({ to: to_accno, amount: amount })
+                console.log(this.accounts[user]);
+            }
+            else {
+                console.log("failed insufficient balance");
+            }
+
+        }
+        else {
+            console.log("invalid account number");
+        }
+
+    }
+    paymentHistory() {
+        let user = this.session["user"]
+        console.log(this.accounts[user].transactions);
+    }
+    getTransaction(){
+        
+        let transaction_history=[];;;
+        for(let account in this.accounts){
+            transaction_history.push(this.accounts[account].transactions)
+        }
+        return transaction_history
+    }
+    creditTransaction(){
+       let transactions=this.getTransaction()
+       for(let trans of transactions){
+           for(let tran of trans){
+               if(tran.to==this.session["user"]){
+                   console.log(tran);
+               }
+           }
+       }
+
+    }
 }
-var obj=new Bank()
-obj.createAccount("sanu",777,"savings",5000)
-obj.withdrawal(10000);
-obj.deposite(5000);
-obj.withdrawal(4000)
-obj.withdrawal(6000)
+var obj = new Bank()
+// console.log(obj.getAccountdetails());
+var user = obj.authenticate(1002, "usertwo")
+console.log(user == 1 ? "login success" : user == 0 ? "invalid account number" : "invalid password");
+//login chythittulla aalde venm balance enquiry nadathan
+console.log(obj.balanceEnquiry()); //ithil nammk accno pass chyynda aavashym illa
+obj.fundTransfer(1001, 5000);
+obj.paymentHistory();
+obj.creditTransaction();

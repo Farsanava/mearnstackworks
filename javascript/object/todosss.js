@@ -1200,54 +1200,7 @@ var todos = [
         "completed": false
     }
 ]
-// var todo= todos.map(to => to.userId)
-// console.log(todo);
-// var finished = todos.map(fin => fin.completed)
-// console.log(finished);
-var total
-var arr = {};
-var count=1
-// var com=todos.filter(fin=>(fin.userId==1 & fin.completed==false)).map(fa=>fa.completed)
-// console.log(com);
-
-// for( fal of com){
-//     for( fal[1] in arr){
-//                 if(fal[1]==false){
-//                     arr[fal[1]]+=1
-//                 }
-//                 else{
-//                     arr[fal[1]]=1
-//                 }
-//     }
-// }
-
-var total=todos.map(id=>id.userId)
-var com=todos.filter(fin=>(fin.userId==1 & fin.completed==false)).map(fa=>[fa.userId,fa.completed])
-// console.log(com);
-// console.log(total);
-for( tot of total){
-    if( tot in arr){
-     arr["total"]=arr[tot]+=1
-    //  for(let tr of todos){
-    //      if(let tr in arr){
-    //          if((tr.))
-    //      }
-    //  }
-     
-     }
-    else{
-     arr["total"]=arr[tot]=1
-    }
-}
-// for(finished of todos){
-//     if(finished==true){
-//         if(finished in arr){
-//             arr.finished+=1
-//         }
-//         else{
-//             arr.finished=1
-//         }
-//     }
-// }
-// }
-console.log(arr);
+// var tru = todos.filter(fin => (fin.completed == true).map(fa =>[fa.userId, fa.completed])
+var tru = todos.filter(fin => (fin.completed == true)||(fin.completed==false)).map(fa => [fa.userId, fa.completed])
+console.log(tru);
+for()

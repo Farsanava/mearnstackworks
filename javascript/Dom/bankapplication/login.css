@@ -1,0 +1,42 @@
+body{
+    margin-top:5%;
+}
+.head{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.part{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+div{
+    border: 1px solid ;
+    width: 30%;
+    height:50%;
+
+    
+}
+.head{
+    background-color: rgb(121, 20, 13);
+}
+.part{
+ background-color: rgb(180, 86, 86);
+}
+h1{
+    color: white;
+}
+#pass,#accno{
+    width: 60%;
+    border-radius: 7px;
+    padding:10px;
+}
+#register{
+    padding: 10px;
+    width: 30%;
+   border:0px;
+    border-radius:7px;
+   background-color: darkgreen;
+}
+#link{
+    text-align: left;
+}

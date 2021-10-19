@@ -1200,54 +1200,112 @@ var todos = [
         "completed": false
     }
 ]
-// var todo= todos.map(to => to.userId)
-// console.log(todo);
-// var finished = todos.map(fin => fin.completed)
-// console.log(finished);
-var total
-var arr = {};
-var count=1
-// var com=todos.filter(fin=>(fin.userId==1 & fin.completed==false)).map(fa=>fa.completed)
-// console.log(com);
 
-// for( fal of com){
-//     for( fal[1] in arr){
-//                 if(fal[1]==false){
-//                     arr[fal[1]]+=1
-//                 }
-//                 else{
-//                     arr[fal[1]]=1
-//                 }
-//     }
-// }
+var arr1 = {}
+var use = todos.map(id => id.userId)
+var com = todos.filter(fin => (fin.completed == false)).map(fa => [fa.userId, fa.completed])
+var tru = todos.filter(fin => (fin.completed == true)).map(fa => [fa.userId, fa.completed])
+var count = 0
+for (us of use) {
+    if (us in arr1) {
+        count++
+        //  arr1[us]={ "total":count}
+    }
+    else {
+        //  arr1[us] = 1
+        count = 1
+        //   arr1[us]={ "total":count}
+    }
+    for (co of com) {
+        if (co in arr1) {
+            pending = arr1[co]
+            pending++
 
-var total=todos.map(id=>id.userId)
-var com=todos.filter(fin=>(fin.userId==1 & fin.completed==false)).map(fa=>[fa.userId,fa.completed])
-// console.log(com);
-// console.log(total);
-for( tot of total){
-    if( tot in arr){
-     arr["total"]=arr[tot]+=1
-    //  for(let tr of todos){
-    //      if(let tr in arr){
-    //          if((tr.))
-    //      }
-    //  }
-     
-     }
-    else{
-     arr["total"]=arr[tot]=1
+        }
+        else {
+
+            pending = arr1[co]
+            pending = 1
+
+        }
+        for (tr of tru) {
+            if (tr in arr1) {
+                trcount++
+                // }
+                // else {
+                //     trcount = 1
+                // }
+            }
+            else {
+                trcount = 1
+            }
+            arr1[us] = { "total": count, "pending": pending, "finished": trcount }
+        }
+    }
+
+    // arr1[us] = { "total": count, "pending": falcount ,"finished":trcount }
+
+}
+console.log(arr1);
+
+var arr2 = {}
+var com = todos.filter(fin => (fin.completed == false)).map(fa => [fa.userId, fa.completed])
+for (co of com) {
+    if (co in arr2) {
+
+        arr2[co] += 1
+    }
+    else {
+        arr2[co] = 1
+
+    }
+
+}
+console.log(arr2);
+
+var arr3 = {}
+var tru = todos.filter(fin => (fin.completed == true)).map(fa => [fa.userId, fa.completed])
+for (tr of tru) {
+    if (tr in arr3) {
+
+        arr3[tr] += 1
+
+
+    }
+    else {
+        arr3[tr] = 1
+
+
     }
 }
-// for(finished of todos){
-//     if(finished==true){
-//         if(finished in arr){
-//             arr.finished+=1
-//         }
-//         else{
-//             arr.finished=1
-//         }
-//     }
-// }
-// }
-console.log(arr);
+console.log(arr3);
+var arr4 = {}
+var count
+var falcount=1
+var trucount=1
+var trufal = todos.filter(fin => (fin.completed == true) || (fin.completed == false)).map(fa => [fa.userId, fa.completed])
+// console.log(trufal[0][1]);
+for (tr of trufal) {
+    if (tr in arr4) {
+        if (tr[0] in arr4) {
+            // arr4[tr[0]] += 1
+            count++
+        }
+        else {
+            // arr4[tr[0]] = 1
+            count = 1
+        }
+        if(tr[1] in arr4){
+           trucount++
+        }
+        else{
+            trucount=1
+        }
+
+    }
+    arr4[tr[0]] = { "total": count, "pending": falcount, "finished": trucount }
+}
+
+console.log(arr4);
+
+
