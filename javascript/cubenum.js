@@ -6,3 +6,7 @@ while(num>0){
       num=Math.floor(num/10)
 }
     console.log(mul);
+// 1*1*1 + 2*2*2 + 3*3*3= 36
+//   1  +   8  + 27  =36
+
+ 

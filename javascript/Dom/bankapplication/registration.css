@@ -1,11 +1,14 @@
-body{
+body
+{
     margin-top:5%;
 }
-.head{
+.head
+{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.part{
+.part
+{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -13,8 +16,6 @@ div{
     border: 1px solid ;
     width: 30%;
     height:50%;
-
-    
 }
 .head{
     background-color: rgb(121, 20, 13);
@@ -25,7 +26,7 @@ div{
 h1{
     color: white;
 }
-#first,#second,#pass,#confirm,#accno{
+#first,#second,#pass,#confim,#accno{
     width: 60%;
     border-radius: 7px;
     padding:10px;

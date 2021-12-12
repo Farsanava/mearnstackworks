@@ -8,7 +8,7 @@
 
 function cube(num){
    
-    return num*3;
+    return num**3;
 
 }
 console.log(cube(3));

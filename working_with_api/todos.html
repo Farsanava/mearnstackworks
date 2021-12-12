@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Todos</title>
+</head>
+<body>
+    <h1>Fetch Todos</h1>
+    <button onclick="fetchTodos()">Fetch Todos</button>
+    <table>
+        <tr 
+        >
+            <td>USERID</td>
+            <td>TITLE</td>
+            <td>COMPLETED</td>
+    </tr>
+        <tbody id="result">
+
+        </tbody>
+    </table>
+</body>
+<script>
+    function fetchTodos(){
+        // var request=new XMLHttpRequest()
+        // request.open("get","https://jsonplaceholder.typicode.com/todos")
+        // request.send()
+        // request.onreadystatechange=()=>{
+        //     if(request.readyState==4){
+        //         if(request.status>199 && request.status<300){
+                  
+        //             let todos=JSON.parse(request.responseText)
+        //             //   console.log(request.responseText);
+        //             populateValues(todos)
+        //         }
+        //     }
+        // }
+
+        //----------replaced with  =>javascript fetch<= ----------
+        fetch("https://jsonplaceholder.typicode.com/todos").then(res=>res.json()).then(data=>populateValues(data))
+
+
+    }
+    function populateValues(todos){
+    let html_data=``
+        for(let todo of todos){
+             let uId=todo.userId
+             let tit=todo.title 
+             let comp=todo.completed
+             html_data+=`<tr><td>${uId}</td><td>${tit}</td><td>${comp}</td></tr>`
+        }
+        document.querySelector("#result").innerHTML=html_data
+    }
+</script>
+</html>

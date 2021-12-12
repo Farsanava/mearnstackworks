@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fetch users</h1>
+    
+</body>
+<script>
+    // class XMLHttpRequest{
+    //     open(method,url){
+
+    //     }
+    //     send(){
+
+    //     }
+    // }
+    // var request=new XMLHttpRequest()
+    
+        let url="https://jsonplaceholder.typicode.com/users"  //nammukk venda url
+        let method="get" // get/post/put/ptch/delete
+        let request=new XMLHttpRequest()  // stp1=>craete object of XMLHttpRequest()
+        // stp2==>call open enna method with 2 arguments (url, method)  
+        request.open(method,url)  // or  request.open("get",..............)
+        // console.log(request);
+        // requst ne send chyynm appo send enna method ne call chyynm
+        request.send()   // ith vare request open chyth vechittollo 
+        // ee request ne serever lot send aaknm thirichum
+        // 2 krym chck chyynm 1=>ee task success or not(server ilkk request kitta ath pinne server 
+        // respondse kodthindonn nokknm)
+        // 2=>stsus code success anonn nokknm
+
+
+        //bakki nxt progrmil
+        
+
+
+    
+</script>
+</html>
