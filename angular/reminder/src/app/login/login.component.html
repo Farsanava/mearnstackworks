@@ -1,0 +1,16 @@
+<div class="wrap">
+    <h2>Sign In</h2>
+    <form action="" [formGroup]="loginForm" (ngSubmit)="login()">
+        <input type="text" placeholder="User ID" formControlName="uid" >
+        <div *ngIf="(this.loginForm.get('uid')?.touched ||this.loginForm.get('uid')?.dirty)
+        && this.loginForm.get('uid')?.errors" id="errors">
+<i class="fas fa-exclamation-circle"></i> Invalid UserID</div>
+        <input type="password" placeholder="Password" formControlName="pass">
+        <div *ngIf="(this.loginForm.get('pass')?.touched ||this.loginForm.get('pass')?.dirty)
+                                && this.loginForm.get('pass')?.errors" id="errors">
+                    <i class="fas fa-exclamation-circle"></i>Invalid password</div>
+        <input type="submit" value="Login" (click)="login()">
+        <p class="fs-6">Doesn't have an account? <a class="text-danger" routerLink='register'>
+            Create an account!</a></p>
+    </form>
+ </div>

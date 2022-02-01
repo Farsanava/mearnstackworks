@@ -1,0 +1,19 @@
+<table>
+    <tr>
+    <th> Date</th> 
+    <th>Event Name</th> 
+</tr>
+    <tr *ngFor="let t of event">
+        <td>{{t.date}}</td>
+        <td>{{t.event}}</td>
+            <button class="btn btn-success" >DELETE</button>
+            <button  class="btn btn-success">Cancel</button>
+    </tr>
+</table>
+<!-- <div *ngFor="let t of event" style=" display: inline;">
+    <i class="fas fa-5x fa-calendar-alt"></i> 
+     <h1 style="display: inline; margin-left: 1%; margin-top: -15%; color: white;">{{t.event}}</h1><br>
+     <button class="btn btn-success" style="display: inline;" >DELETE</button>
+     <h4 style="display: inline; margin-left: 6%;">{{t.date}}</h4> 
+     <button  class="btn btn-success">Cancel</button>
+</div> -->

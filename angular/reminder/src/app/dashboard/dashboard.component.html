@@ -1,0 +1,54 @@
+<!-- <div class="main"> -->
+  <nav class="navbar navbar-light mt-1 navbar-expand{-sm|-md|-lg|-xl|-xxl}">
+    <div class="container-fluid">
+      <h1 class=" navhd navbar-brand">REMIND ME</h1>
+      <!-- <form class="d-flex"> -->
+        <button type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-outline-light " type="submit" >Sign Out</button>
+      <!-- </form> -->
+    </div>
+    <div  style="opacity: 0.8;" class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="5" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            
+            <button type="button" class="btn btn-dark" style="margin-left: 40%;" (click)="logout()" >Sign Out</button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-black" 
+            (click)="deleteFromParent()" style="margin-right:28%; border: 1px solid black;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" >
+              Delete the Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-delete-confirmation (onCancel)="onCancel()"   (onDelete)="onDelete($event)" [item]=uid></app-delete-confirmation>
+  </nav>
+ <h1 class="hd">WELCOME {{user}}</h1>
+ <div class="wrap"><br>
+ <form action="" class="" [formGroup]="eventForm" (ngSubmit)="addevent()">
+  <input type="text" placeholder="User ID" formControlName="uid" >
+  <div *ngIf="(this.eventForm.get('uid')?.touched ||this.eventForm.get('uid')?.dirty)
+  && this.eventForm.get('uid')?.errors" id="errors">
+<i class="fas fa-exclamation-circle"></i> Invalid UserID</div><br>
+  <input type="date" placeholder="Enter the Date" formControlName="date">
+  <div *ngIf="(this.eventForm.get('date')?.touched ||this.eventForm.get('date')?.dirty)
+                          && this.eventForm.get('date')?.errors" id="errors">
+              <i class="fas fa-exclamation-circle"></i>Invalid date</div><br>
+  <input type="text" placeholder="Events" formControlName="event">
+  <div *ngIf="(this.eventForm.get('event')?.touched ||this.eventForm.get('event')?.dirty)
+  && this.eventForm.get('event')?.errors" id="errors">
+<i class="fas fa-exclamation-circle"></i>Not Event</div><br><br>
+
+</form>
+</div>
+   <button class="one" (click)="addevent()">
+   ADD EVENTS</button>
+
+
+ 
+   <button class="two" (click)="showevent()">VIEW EVENTS</button>  
+
+<!-- </div> -->

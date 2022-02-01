@@ -6,11 +6,13 @@
                     <div class="form-group col-md-6">
                         <h1 class="text-center">Sign in</h1>
                         <div class="mb-3">
-                            <input type="text" (change)="acnoChange($event)" name="acno" [(ngModel)]="acno" #acno required="true" class="form-control" id="accno" name="accno"
+                            <!-- [(ngModel)]="acno"  -->
+                            <input type="text" (change)="acnoChange($event)" name="acno"  required="true" class="form-control" id="accno" name="accno"
                                [value]="accno" placeholder="Enter your account number">
                         </div>
                         <div class="mb-3">
-                            <input type="password" (change)="pswChange($event)" name="pass" [(ngModel)]="pass" #pass required="true" class="form-control" id="pwd" name="password"
+                            <!-- [(ngModel)]="pass" -->
+                            <input type="password" (change)="pswChange($event)" name="pass"   required="true" class="form-control" id="pwd" name="password"
                                 placeholder="Enter your password">
                         </div>
                         <button   (click)="login()" class="btn btn-outline-primary col-md-12 col-sm-12 col-12 mb-3"> Login</button>

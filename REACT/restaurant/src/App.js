@@ -8,9 +8,7 @@ import RestaurantDetails from './components/RestaurantDetails';
 
 
 function App() {
-  return (
-    
-   
+  return (  
    <Router>
      <Header/>
        <Routes>
