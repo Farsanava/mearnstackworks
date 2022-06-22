@@ -16,7 +16,7 @@ expenses.push(30000)
 console.log(expenses);
 
 // remove an item from end of the position
-code .
+// code .
 
 expenses.pop()
 console.log(expenses);

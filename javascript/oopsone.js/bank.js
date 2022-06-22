@@ -126,10 +126,10 @@ class Bank {
 }
 var obj = new Bank()
 // console.log(obj.getAccountdetails());
-var user = obj.authenticate(1002, "usertwo")
+var user = obj.authenticate(1001, "userone")
 console.log(user == 1 ? "login success" : user == 0 ? "invalid account number" : "invalid password");
 //login chythittulla aalde venm balance enquiry nadathan
 console.log(obj.balanceEnquiry()); //ithil nammk accno pass chyynda aavashym illa
-obj.fundTransfer(1001, 5000);
+obj.fundTransfer(1002, 1000);
 obj.paymentHistory();
 obj.creditTransaction();

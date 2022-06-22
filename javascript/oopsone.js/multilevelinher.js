@@ -3,7 +3,7 @@ class Parant {
         console.log("inside parent");
     }
 }
-class Child extends Parent {
+class Child extends Parent{
     m2() {
         console.log("inside m2");
     }

@@ -2,7 +2,7 @@
 var arr=[10,11,13,14,12,15]
 //        1  2  3  4  5  6     -->length
 arr.sort((num1,num2)=>num1-num2)
-var element=51;
+var element=15;
 var low=0,upp=arr.length-1;
 
 var flag=0;
