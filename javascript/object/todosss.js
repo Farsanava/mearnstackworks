@@ -1203,4 +1203,4 @@ var todos = [
 // var tru = todos.filter(fin => (fin.completed == true).map(fa =>[fa.userId, fa.completed])
 var tru = todos.filter(fin => (fin.completed == true)||(fin.completed==false)).map(fa => [fa.userId, fa.completed])
 console.log(tru);
-for()
+// for()
